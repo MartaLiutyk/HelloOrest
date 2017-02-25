@@ -44,13 +44,11 @@ public class Fragment extends android.support.v4.app.Fragment {
 
     private void prepareRecipesData() {
 
-        Recipes recipes = new Recipes("Apple with carrot", "Salat",R.drawable.salat);
+        Recipes recipes = new Recipes("Salat",R.drawable.salat);
         recipesList.add(recipes);
-        Recipes recipes1 = new Recipes("Chicken", "Chicken", R.drawable.chicken);
+        Recipes recipes1 = new Recipes("Chicken", R.drawable.chicken);
         recipesList.add(recipes1);
 
-        Recipes recipes2 = new Recipes("Bonbons", "Bonbons", R.drawable.bonbons);
-        recipesList.add(recipes2);
 
 
     }

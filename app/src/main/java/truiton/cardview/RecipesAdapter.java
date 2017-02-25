@@ -11,7 +11,7 @@ import android.widget.TextView;
 import java.util.List;
 
 /**
- * Created by MSI on 24.02.2017.
+ * Created by melod on 24.02.2017.
  */
 
 public class RecipesAdapter extends RecyclerView.Adapter<RecipesAdapter.RecipesViewHolder> {
@@ -21,7 +21,6 @@ public class RecipesAdapter extends RecyclerView.Adapter<RecipesAdapter.RecipesV
 
     public class RecipesViewHolder extends RecyclerView.ViewHolder {
         public CardView cardView;
-        public TextView ingredients;
         public TextView name;
         public ImageView recipesPhoto;
         public View itemView;
@@ -31,7 +30,6 @@ public class RecipesAdapter extends RecyclerView.Adapter<RecipesAdapter.RecipesV
             super(view);
             itemView = view;
             cardView = (CardView) itemView.findViewById(R.id.card_view);
-            ingredients = (TextView) itemView.findViewById(R.id.recipes_ingredients);
             name = (TextView) itemView.findViewById(R.id.recipes_name);
             recipesPhoto = (ImageView) itemView.findViewById(R.id.recipes_photo);
 
@@ -56,7 +54,6 @@ public class RecipesAdapter extends RecyclerView.Adapter<RecipesAdapter.RecipesV
     @Override
     public void onBindViewHolder(RecipesViewHolder holder, int position) {
         Recipes recipes = recipesList.get(position);
-        holder.ingredients.setText(recipes.getIngredients());
         holder.name.setText(recipes.getName());
         holder.recipesPhoto.setImageResource(recipes.getIdPhoto());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
